@@ -1,0 +1,265 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "1690141a39b92a4a52d685ac57cc2e7e",
+    "content-hash": "ba6e80f77bab4c770e8e387b357a85c7",
+    "packages": [
+        {
+            "name": "fastd/console",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/console.git",
+                "reference": "901993d553f8d59e77fccd962880d1062c516373"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/console/zipball/901993d553f8d59e77fccd962880d1062c516373",
+                "reference": "901993d553f8d59e77fccd962880d1062c516373",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "bin": [
+                "bin/console"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD console component",
+            "keywords": [
+                "FastD",
+                "console"
+            ],
+            "time": "2015-12-11 08:18:18"
+        },
+        {
+            "name": "fastd/database",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/database.git",
+                "reference": "2c0c7d7a52977aa58dce9edf84e5b38f8b4ef596"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/database/zipball/2c0c7d7a52977aa58dce9edf84e5b38f8b4ef596",
+                "reference": "2c0c7d7a52977aa58dce9edf84e5b38f8b4ef596",
+                "shasum": ""
+            },
+            "require": {
+                "fastd/generator": "~1.0",
+                "php": ">=7.0",
+                "symfony/yaml": "~3.0"
+            },
+            "require-dev": {
+                "fastd/http": "2.0.x-dev",
+                "phpunit/dbunit": "~2.0",
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "fdb",
+            "keywords": [
+                "FastD",
+                "fdb"
+            ],
+            "time": "2016-03-05 09:26:14"
+        },
+        {
+            "name": "fastd/generator",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/generator.git",
+                "reference": "945a7bc790f6e583d8f3e7f575d12fa33136e609"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/generator/zipball/945a7bc790f6e583d8f3e7f575d12fa33136e609",
+                "reference": "945a7bc790f6e583d8f3e7f575d12fa33136e609",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD generator",
+            "time": "2016-02-29 15:41:36"
+        },
+        {
+            "name": "fastd/swoole",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/swoole.git",
+                "reference": "52f289a747cd1bb635cddb87ce8bc2398d086f87"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/52f289a747cd1bb635cddb87ce8bc2398d086f87",
+                "reference": "52f289a747cd1bb635cddb87ce8bc2398d086f87",
+                "shasum": ""
+            },
+            "require": {
+                "ext-swoole": ">=1.8.0",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src/FastD"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD swoole server component.",
+            "time": "2016-03-08 03:47:40"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "b5ba64cd67ecd6887f63868fa781ca094bd1377c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/b5ba64cd67ecd6887f63868fa781ca094bd1377c",
+                "reference": "b5ba64cd67ecd6887f63868fa781ca094bd1377c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-02-23 15:16:06"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "fastd/console": 20,
+        "fastd/database": 20,
+        "fastd/generator": 20,
+        "fastd/swoole": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.6"
+    },
+    "platform-dev": []
+}

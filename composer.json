@@ -1,0 +1,32 @@
+{
+    "name": "fastd/fdx",
+    "description": "FastDX",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "janhuang",
+            "email": "bboyjanhuang@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "fastd/console": "2.0.x-dev",
+        "fastd/database": "2.0.x-dev",
+        "fastd/generator": "1.0.x-dev",
+        "fastd/swoole": "2.0.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}

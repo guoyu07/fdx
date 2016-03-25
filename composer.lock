@@ -161,17 +161,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/swoole.git",
-                "reference": "52f289a747cd1bb635cddb87ce8bc2398d086f87"
+                "reference": "e485902d94ead2562dc73fb9422041325057913a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/52f289a747cd1bb635cddb87ce8bc2398d086f87",
-                "reference": "52f289a747cd1bb635cddb87ce8bc2398d086f87",
+                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/e485902d94ead2562dc73fb9422041325057913a",
+                "reference": "e485902d94ead2562dc73fb9422041325057913a",
                 "shasum": ""
             },
             "require": {
-                "ext-swoole": ">=1.8.0",
-                "php": ">=5.6"
+                "php": ">=7"
             },
             "type": "library",
             "extra": {
@@ -195,7 +194,7 @@
                 }
             ],
             "description": "FastD swoole server component.",
-            "time": "2016-03-08 03:47:40"
+            "time": "2016-03-20 13:22:18"
         },
         {
             "name": "symfony/yaml",

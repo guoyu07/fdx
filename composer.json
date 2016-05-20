@@ -1,6 +1,6 @@
 {
     "name": "fastd/fdx",
-    "description": "FastDX",
+    "description": "Fast-D X",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,10 +10,7 @@
         }
     ],
     "require": {
-        "php": ">=5.6",
-        "fastd/console": "2.0.x-dev",
-        "fastd/database": "2.0.x-dev",
-        "fastd/generator": "1.0.x-dev",
+        "php": ">=7.0",
         "fastd/swoole": "2.0.x-dev"
     },
     "autoload": {

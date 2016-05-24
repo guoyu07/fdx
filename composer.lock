@@ -8,21 +8,62 @@
     "content-hash": "cae8b9a84b24aee4a1a99ba0f99ea112",
     "packages": [
         {
+            "name": "fastd/packet",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/packet.git",
+                "reference": "023d0c1709c80c925dc9261265c26013c19c1dcf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/packet/zipball/023d0c1709c80c925dc9261265c26013c19c1dcf",
+                "reference": "023d0c1709c80c925dc9261265c26013c19c1dcf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "time": "2016-05-20 08:08:44"
+        },
+        {
             "name": "fastd/swoole",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/swoole.git",
-                "reference": "da6de0f52022d51ecb1b890d0d7bfaafaba505f0"
+                "reference": "a9f7614b4024318ecc1fdcd4656dcd9f9c07bdd5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/da6de0f52022d51ecb1b890d0d7bfaafaba505f0",
-                "reference": "da6de0f52022d51ecb1b890d0d7bfaafaba505f0",
+                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/a9f7614b4024318ecc1fdcd4656dcd9f9c07bdd5",
+                "reference": "a9f7614b4024318ecc1fdcd4656dcd9f9c07bdd5",
                 "shasum": ""
             },
             "require": {
                 "ext-swoole": ">=1.8",
+                "fastd/packet": "~1.0",
                 "php": ">=7.0"
             },
             "require-dev": {
@@ -30,7 +71,8 @@
             },
             "bin": [
                 "install",
-                "monitor"
+                "monitor",
+                "bootstrap.php"
             ],
             "type": "library",
             "extra": {
@@ -54,7 +96,7 @@
                 }
             ],
             "description": "FastD swoole.",
-            "time": "2016-05-20 03:39:34"
+            "time": "2016-05-23 16:15:53"
         }
     ],
     "packages-dev": [],

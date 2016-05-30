@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: janhuang
  * Date: 16/5/30
- * Time: 下午6:58
+ * Time: 下午11:01
  * Github: https://www.github.com/janhuang
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
@@ -12,12 +12,7 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Fdx;
-
-class Handler
-{
-    public function scanHandlers()
-    {
-
-    }
-}
+return [
+    'handle' => '',
+    'monitor' => '',
+];

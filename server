@@ -34,6 +34,8 @@ if (!defined('COMPOSER_INSTALL')) {
     );
 }
 
-include COMPOSER_INSTALL;
+$composer = include COMPOSER_INSTALL;
 
+use Fdx\Server;
 
+Server::start($composer);

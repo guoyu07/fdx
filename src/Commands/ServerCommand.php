@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: janhuang
  * Date: 16/5/30
- * Time: 下午6:59
+ * Time: 下午11:00
  * Github: https://www.github.com/janhuang
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
@@ -12,9 +12,9 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Fdx;
+namespace Fdx\Commands;
 
-class Monitor
+class ServerCommand
 {
-    
+
 }

@@ -15,11 +15,50 @@
 namespace Fdx;
 
 use Composer\Autoload\ClassLoader;
+use FastD\Console\ArgvInput;
+use FastD\Console\Environment\Application;
+use Fdx\Commands\Fdx;
 
 class Server
 {
-    public static function start(ClassLoader $classLoader)
+    protected static $instance;
+
+    /**
+     * @return static
+     */
+    protected static function getInstance()
     {
-        print_r($classLoader->getClassMap());
+        if (null === static::$instance) {
+            static::$instance = new static();
+        }
+
+        return static::$instance;
+    }
+
+    public static function run(ClassLoader $classLoader)
+    {
+        $serverScript = static::getInstance();
+
+        $config = $classLoader->getPrefixesPsr4()['Fdx\\'][0] . '/../config.php';
+
+        if (!file_exists($config)) {
+            throw new \RuntimeException(sprintf('Config file is not exists.'));
+        }
+
+        // include config to array.
+        $config = include $config;
+
+        return $serverScript->runCommand();
+    }
+
+    public function runCommand()
+    {
+        $input = new ArgvInput();
+
+        $consoleApp = new Application();
+
+        $consoleApp->setCommand(new Fdx());
+
+        return $consoleApp->run($input);
     }
 }

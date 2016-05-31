@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 /**
  * Created by PhpStorm.
@@ -38,4 +39,4 @@ $composer = include COMPOSER_INSTALL;
 
 use Fdx\Server;
 
-Server::start($composer);
+Server::run($composer);

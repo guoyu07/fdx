@@ -13,6 +13,6 @@
  */
 
 return [
-    'handle' => '',
-    'monitor' => '',
+    'handle' => \Handle::class,
+    'monitor' => \Monitor::class,
 ];

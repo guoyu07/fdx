@@ -37,6 +37,11 @@ if (!defined('COMPOSER_INSTALL')) {
 
 $composer = include COMPOSER_INSTALL;
 
+/**
+ * Bootstrap server.
+ *
+ * 
+ */
 use Fdx\Server;
 
 Server::run($composer);

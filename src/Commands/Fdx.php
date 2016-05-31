@@ -14,9 +14,29 @@ namespace Fdx\Commands;
 use FastD\Console\Command\Command;
 use FastD\Console\IO\Input;
 use FastD\Console\IO\Output;
+use FastD\Swoole\Server\Server;
+use FastD\Swoole\Console\Service;
 
+/**
+ * Class Fdx
+ * @package Fdx\Commands
+ */
 class Fdx extends Command
 {
+    /**
+     * @var array
+     */
+    protected $config;
+
+    /**
+     * Fdx constructor.
+     * @param array $config
+     */
+    public function __construct(array $config)
+    {
+        $this->config = $config;
+    }
+
     /**
      * @return string
      */
@@ -30,7 +50,10 @@ class Fdx extends Command
      */
     public function configure()
     {
-        // TODO: Implement configure() method.
+        $this
+            ->setArgument('action')
+            ->setOption('daemonize', Input::ARG_NONE)
+        ;
     }
 
     /**
@@ -40,6 +63,45 @@ class Fdx extends Command
      */
     public function execute(Input $input, Output $output)
     {
-        // TODO: Implement execute() method.
+        $server = $this->handle($this->config);
+
+        $action = $input->get('action') ?? 'status';
+
+        switch ($action) {
+            case 'start':
+                Service::server($server)->start();
+                break;
+            case 'stop':
+                Service::server($server)->shutdown();
+                break;
+            case 'restart':
+                Service::server($server)->shutdown();
+                Service::server($server)->start();
+                break;
+            case 'reload':
+                Service::server($server)->reload();
+                break;
+            case 'watch':
+                Service::server($server)->watch();
+                break;
+            case 'status':
+            default:
+                Service::server($server)->status();
+        }
+    }
+
+    /**
+     * @param array $config
+     * @return Server
+     */
+    protected function handle(array $config)
+    {
+        $handle = new $config['handle']();
+
+        $server = $config['server']::create();
+
+        $server->handle($handle);
+
+        return $server;
     }
 }

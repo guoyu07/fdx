@@ -18,9 +18,17 @@ use Composer\Autoload\ClassLoader;
 use FastD\Console\ArgvInput;
 use FastD\Console\Environment\Application;
 use Fdx\Commands\Fdx;
+use Fdx\Commands\Init;
 
+/**
+ * Class Server
+ * @package Fdx
+ */
 class Server
 {
+    /**
+     * @var static
+     */
     protected static $instance;
 
     /**
@@ -35,6 +43,10 @@ class Server
         return static::$instance;
     }
 
+    /**
+     * @param ClassLoader $classLoader
+     * @return int
+     */
     public static function run(ClassLoader $classLoader)
     {
         $serverScript = static::getInstance();
@@ -48,16 +60,21 @@ class Server
         // include config to array.
         $config = include $config;
 
-        return $serverScript->runCommand();
+        return $serverScript->runCommand($config);
     }
 
-    public function runCommand()
+    /**
+     * @param array $config
+     * @return int
+     */
+    public function runCommand(array $config)
     {
         $input = new ArgvInput();
 
         $consoleApp = new Application();
 
-        $consoleApp->setCommand(new Fdx());
+        $consoleApp->setCommand(new Fdx($config));
+        $consoleApp->setCommand(new Init());
 
         return $consoleApp->run($input);
     }

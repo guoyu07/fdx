@@ -15,4 +15,5 @@
 return [
     'handle' => \Handle::class,
     'monitor' => \Monitor::class,
+    'server' => \FastD\Swoole\Server\TcpServer::class,
 ];

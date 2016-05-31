@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: janhuang
- * Date: 16/5/30
- * Time: 下午6:58
+ * Date: 16/5/31
+ * Time: 上午11:00
  * Github: https://www.github.com/janhuang
  * Coding: https://www.coding.net/janhuang
  * SegmentFault: http://segmentfault.com/u/janhuang
@@ -12,11 +12,9 @@
  * WebSite: http://www.janhuang.me
  */
 
-namespace Fdx;
+namespace Fdx\Handle;
 
-interface HandleInterface
+interface UdpInterface
 {
-    public function onReceive();
-
-    public function onClose();
+    public function onPacket(\swoole_server $server, string $data, array $client_info);
 }

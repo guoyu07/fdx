@@ -1,7 +1,7 @@
 {
     "name": "fastd/fdx",
     "description": "Fast-D X",
-    "type": "library",
+    "type": "project",
     "license": "MIT",
     "authors": [
         {

@@ -164,12 +164,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/fdx-kernel.git",
-                "reference": "8240eb171506887fcde3e12a5feb2fda8c4bbd80"
+                "reference": "abab065e80bf543c1ef98133ff5df256edbdd0ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/fdx-kernel/zipball/8240eb171506887fcde3e12a5feb2fda8c4bbd80",
-                "reference": "8240eb171506887fcde3e12a5feb2fda8c4bbd80",
+                "url": "https://api.github.com/repos/JanHuang/fdx-kernel/zipball/abab065e80bf543c1ef98133ff5df256edbdd0ad",
+                "reference": "abab065e80bf543c1ef98133ff5df256edbdd0ad",
                 "shasum": ""
             },
             "require": {
@@ -202,7 +202,7 @@
                 }
             ],
             "description": "Fast-D X Kernel",
-            "time": "2016-07-07 02:41:43"
+            "time": "2016-07-07 06:40:49"
         },
         {
             "name": "fastd/packet",

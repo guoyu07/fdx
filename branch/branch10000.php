@@ -15,7 +15,7 @@ use Fdx\FdxClient;
 $client = new FdxClient('tcp://127.0.0.1:9527');
 
 $start = microtime(true);
-for ($i = 0; $i < 10000; $i++) {
+for ($i = 0; $i < 100000; $i++) {
     $client->call('test.getName');
 }
 $client->close();

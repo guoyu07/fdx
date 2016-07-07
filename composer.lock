@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cbc42d55368c56f04a7cede304255e86",
-    "content-hash": "7405d5ab8b5c3257cbe4266ab02e4c8a",
+    "hash": "0eace8e003a579b195a27381a69be6dd",
+    "content-hash": "75ece2587a9b91fb6b737e3091b81492",
     "packages": [
         {
             "name": "fastd/console",
@@ -56,6 +56,54 @@
                 "console"
             ],
             "time": "2016-06-27 02:49:42"
+        },
+        {
+            "name": "fastd/container",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/container.git",
+                "reference": "e7a0f4f2aafb6eae71d654d420df59b828fecc7f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/container/zipball/e7a0f4f2aafb6eae71d654d420df59b828fecc7f",
+                "reference": "e7a0f4f2aafb6eae71d654d420df59b828fecc7f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD container component",
+            "keywords": [
+                "FastD",
+                "container"
+            ],
+            "time": "2016-05-11 14:35:16"
         },
         {
             "name": "fastd/debug",
@@ -109,6 +157,52 @@
                 "exception"
             ],
             "time": "2016-06-13 10:31:30"
+        },
+        {
+            "name": "fastd/fdx-kernel",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/fdx-kernel.git",
+                "reference": "8240eb171506887fcde3e12a5feb2fda8c4bbd80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/fdx-kernel/zipball/8240eb171506887fcde3e12a5feb2fda8c4bbd80",
+                "reference": "8240eb171506887fcde3e12a5feb2fda8c4bbd80",
+                "shasum": ""
+            },
+            "require": {
+                "fastd/console": "~2.0.0",
+                "fastd/container": "~2.0.0",
+                "fastd/debug": "~2.0.0",
+                "fastd/swoole": "2.0.x-dev",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "bin": [
+                "server"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Fdx\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "Fast-D X Kernel",
+            "time": "2016-07-07 02:41:43"
         },
         {
             "name": "fastd/packet",
@@ -1790,6 +1884,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "fastd/fdx-kernel": 20,
         "fastd/swoole": 20
     },
     "prefer-stable": false,

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0eace8e003a579b195a27381a69be6dd",
-    "content-hash": "75ece2587a9b91fb6b737e3091b81492",
+    "hash": "78c3571a64b06fe232db0691783a7705",
+    "content-hash": "e40dc2d3e070091e799cb87792f8d44d",
     "packages": [
         {
             "name": "fastd/console",
@@ -106,6 +106,58 @@
             "time": "2016-05-11 14:35:16"
         },
         {
+            "name": "fastd/database",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/database.git",
+                "reference": "85cae10e2ed56eda3a22126c0f88d1a86c51600a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/database/zipball/85cae10e2ed56eda3a22126c0f88d1a86c51600a",
+                "reference": "85cae10e2ed56eda3a22126c0f88d1a86c51600a",
+                "shasum": ""
+            },
+            "require": {
+                "fastd/generator": "~1.1.0",
+                "fastd/pagination": "~1.0.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "fastd/http": "~2.0.0@beta",
+                "phpunit/dbunit": "~2.0",
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "fdb",
+            "keywords": [
+                "FastD",
+                "fdb"
+            ],
+            "time": "2016-06-30 14:51:45"
+        },
+        {
             "name": "fastd/debug",
             "version": "v2.0.0",
             "source": {
@@ -164,18 +216,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/fdx-kernel.git",
-                "reference": "abab065e80bf543c1ef98133ff5df256edbdd0ad"
+                "reference": "c6d4cb127b31fa8554c4b11a552b736bb4ab5463"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/fdx-kernel/zipball/abab065e80bf543c1ef98133ff5df256edbdd0ad",
-                "reference": "abab065e80bf543c1ef98133ff5df256edbdd0ad",
+                "url": "https://api.github.com/repos/JanHuang/fdx-kernel/zipball/c6d4cb127b31fa8554c4b11a552b736bb4ab5463",
+                "reference": "c6d4cb127b31fa8554c4b11a552b736bb4ab5463",
                 "shasum": ""
             },
             "require": {
                 "fastd/console": "~2.0.0",
                 "fastd/container": "~2.0.0",
-                "fastd/debug": "~2.0.0",
+                "fastd/database": "~2.0.0",
+                "fastd/storage": "~2.0.0",
                 "fastd/swoole": "2.0.x-dev",
                 "php": ">=7.0"
             },
@@ -202,7 +255,51 @@
                 }
             ],
             "description": "Fast-D X Kernel",
-            "time": "2016-07-07 06:40:49"
+            "time": "2016-07-07 14:45:15"
+        },
+        {
+            "name": "fastd/generator",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/generator.git",
+                "reference": "e8d8cd2cc14f9d9384a3729734a4972396503dda"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/generator/zipball/e8d8cd2cc14f9d9384a3729734a4972396503dda",
+                "reference": "e8d8cd2cc14f9d9384a3729734a4972396503dda",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD generator",
+            "time": "2016-05-14 15:29:07"
         },
         {
             "name": "fastd/packet",
@@ -245,17 +342,108 @@
             "time": "2016-05-27 16:02:48"
         },
         {
+            "name": "fastd/pagination",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/pagination.git",
+                "reference": "8effab4b45ddd49d4e89e2803e0f2d231f4627d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/pagination/zipball/8effab4b45ddd49d4e89e2803e0f2d231f4627d9",
+                "reference": "8effab4b45ddd49d4e89e2803e0f2d231f4627d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "pagination",
+            "keywords": [
+                "FastD",
+                "pagination"
+            ],
+            "time": "2016-06-16 03:58:35"
+        },
+        {
+            "name": "fastd/storage",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JanHuang/storage.git",
+                "reference": "fb73f52449c199b7d6cda86247e551c6aacbeb7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JanHuang/storage/zipball/fb73f52449c199b7d6cda86247e551c6aacbeb7b",
+                "reference": "fb73f52449c199b7d6cda86247e551c6aacbeb7b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FastD\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD php simple framework Storage Component",
+            "keywords": [
+                "FastD",
+                "storage"
+            ],
+            "time": "2016-06-21 03:37:55"
+        },
+        {
             "name": "fastd/swoole",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/swoole.git",
-                "reference": "60afb3d011f4fd3e111ffbf0b2dc296c241edefb"
+                "reference": "3f3cc3e163b715d56986b84cdf14de53a386ef88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/60afb3d011f4fd3e111ffbf0b2dc296c241edefb",
-                "reference": "60afb3d011f4fd3e111ffbf0b2dc296c241edefb",
+                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/3f3cc3e163b715d56986b84cdf14de53a386ef88",
+                "reference": "3f3cc3e163b715d56986b84cdf14de53a386ef88",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +481,7 @@
                 }
             ],
             "description": "FastD swoole.",
-            "time": "2016-07-06 03:18:40"
+            "time": "2016-07-08 04:17:41"
         },
         {
             "name": "maximebf/debugbar",

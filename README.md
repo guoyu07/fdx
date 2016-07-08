@@ -26,5 +26,8 @@ php bin/server fdx <action {start|reload|stop|watch|status|dump}> [--host|-h IP�
 
 * Http 协议支持
 * monitor 管理支持
+* 分布式
+* 服务发现
+* 负载均衡
 
 ## License MIT

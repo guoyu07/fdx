@@ -14,13 +14,17 @@ use Fdx\FdxClient;
 
 $client = new FdxClient('tcp://127.0.0.1:9527');
 
+$result = $client->call('test.getAge');
+
+echo $result . PHP_EOL;
+
 $start = microtime(true);
-for ($i = 0; $i < 10000; $i++) {
-    $client->call('test.getName');
+/*for ($i = 0; $i < 10000; $i++) {
+
 }
-echo $i;
+echo $i;*/
 
 $client->close();
 $end = microtime(true);
 
-echo "TC " . round($start - $end, 3) . PHP_EOL;
+//echo "TC " . round($start - $end, 3) . PHP_EOL;

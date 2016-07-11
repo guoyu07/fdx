@@ -11,8 +11,8 @@
 
 class Test
 {
-    public function getName()
+    public function getAge()
     {
-        return 'test';
+        return '19';
     }
 }

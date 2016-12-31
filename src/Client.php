@@ -58,7 +58,7 @@ class Client
                 })
                 ->resolve();
         } else {
-            $config = include_once $this->cache;
+            $config = include $this->cache;
         }
 
         return $config;

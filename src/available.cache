@@ -1,0 +1,26 @@
+<?php return array (
+  'nodes' => 
+  array (
+    '10.0.2.15' => 
+    array (
+      'service' => 'fds rpc',
+      'pid' => 7531,
+      'sock' => 1,
+      'host' => '10.0.2.15',
+      'port' => 9527,
+      'stats' => 
+      array (
+        'start_time' => 1483174115,
+        'connection_num' => 0,
+        'accept_count' => 0,
+        'close_count' => 0,
+        'tasking_num' => 0,
+        'request_count' => 0,
+        'worker_request_count' => 0,
+      ),
+      'error' => 0,
+      'time' => 1483174205,
+    ),
+  ),
+  'length' => 1,
+);

@@ -10,4 +10,29 @@
 composer require "fastd/fdx:1.0.x-dev"
 ```
 
+##### Requirements
+
+* Swoole > 1.8
+* Redis
+
+### Usage
+
+##### 开启服务发现
+
+```php
+php examples/discovery.php
+```
+
+##### 开启服务
+
+```php
+php examples/server.php
+```
+
+##### 调用客户端
+
+```php
+php examples/client.php
+```
+
 ## License MIT

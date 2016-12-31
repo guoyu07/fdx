@@ -14,14 +14,29 @@ use swoole_server;
  * @link      http://www.fast-d.cn/
  */
 
+/**
+ * Class Server
+ * @package Fdx
+ */
 class Server extends Tcp
 {
     const SERVER_NAME = 'fds rpc';
 
+    /**
+     * @var array
+     */
     protected $services;
 
+    /**
+     * @var array
+     */
     protected $discoveries;
 
+    /**
+     * @param $name
+     * @param $callback
+     * @return $this
+     */
     public function withService($name, $callback)
     {
         $this->services[$name] = $callback;
@@ -29,6 +44,10 @@ class Server extends Tcp
         return $this;
     }
 
+    /**
+     * @param array $servers
+     * @return $this
+     */
     public function withDiscovery(array $servers)
     {
         $this->discoveries = $servers;
@@ -36,11 +55,17 @@ class Server extends Tcp
         return $this;
     }
 
+    /**
+     * 上报服务器状态数据
+     *
+     * @return void
+     */
     protected function reported()
     {
         $that = $this;
         $servers = $this->discoveries;
-        $process = new \swoole_process(function (\swoole_process $process) use ($servers, $that) {
+        $swoole = $this->getSwoole();
+        $process = new \swoole_process(function (\swoole_process $process) use ($servers, $that, $swoole) {
             process_rename(static::SERVER_NAME . ' reporter');
             while (true) {
                 $ip = get_local_ip();
@@ -48,10 +73,15 @@ class Server extends Tcp
                     try {
                         $client = new SyncClient($server);
                         $client
-                            ->connect(function ($client) use ($ip) {
+                            ->connect(function ($client) use ($ip, $swoole, $that) {
                                 $client->send(Json::encode([
                                     'service'   => static::SERVER_NAME,
+                                    'pid'       => $swoole->master_pid,
+                                    'sock'      => $that->getSockType(),
                                     'host'      => $ip,
+                                    'port'      => $that->getPort(),
+                                    'stats'     => $swoole->stats(),
+                                    'error'     => $swoole->getLastError(),
                                     'time'      => time()
                                 ]));
                             })
@@ -71,6 +101,12 @@ class Server extends Tcp
         $this->getSwoole()->addProcess($process);
     }
 
+    /**
+     * 初始化，添加进程到server中
+     *
+     * @param \swoole_server_port|null $swoole
+     * @return $this
+     */
     public function bootstrap(\swoole_server_port $swoole = null)
     {
         parent::bootstrap();
@@ -78,6 +114,8 @@ class Server extends Tcp
         if (!empty($this->discoveries)) {
             $this->reported();
         }
+
+        return $this;
     }
 
     /**
@@ -104,7 +142,7 @@ class Server extends Tcp
         }
 
         $service = $this->services[$data['service']];
-        $response = call_user_func_array($service, (isset($data['data']) && is_array($data['data'])) ? $data['data'] : []);
+        $response = call_user_func_array($service, (isset($data['arguments']) && is_array($data['arguments'])) ? $data['arguments'] : []);
         return Json::encode($response);
     }
 }

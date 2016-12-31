@@ -16,10 +16,22 @@ use Redis;
 use swoole_server;
 use swoole_server_port;
 
+/**
+ * Class Discovery
+ * @package Fdx
+ */
 class Discovery extends Tcp
 {
     const SERVER_NAME = 'fds discovery';
 
+    const NODE_KEY = 'nodes';
+
+    /**
+     * 启动多端口
+     *
+     * @param swoole_server_port|null $swoole
+     * @return $this
+     */
     public function bootstrap(swoole_server_port $swoole = null)
     {
         $address = 'tcp://' . $this->host . ':' . ((int)$this->port + 1);
@@ -29,11 +41,16 @@ class Discovery extends Tcp
         $server->configure($this->config);
         $this->listen($server);
 
-        $bootstrap = parent::bootstrap($swoole);
+        parent::bootstrap($swoole);
 
-        return $bootstrap;
+        return $this;
     }
 
+    /**
+     * 连接数据存储载体，目前使用Redis
+     *
+     * @return Redis
+     */
     protected function connectToRedis()
     {
         $redis = new Redis();
@@ -65,10 +82,12 @@ class Discovery extends Tcp
         $info = $server->connection_info($fd, $from_id);
         $redis = $this->connectToRedis();
 
+        // TODO 内部循环，超时没有数据，剔除异常服务端
         if ($server->port == $info['server_port']) {
             $data = Json::decode($data);
-            $result = $redis->hSet('node', $data['host'], json_encode($data));
-            $length = $redis->hLen('node');
+            print_r($data);
+            $result = $redis->hSet(Discovery::NODE_KEY, $data['host'], json_encode($data));
+            $length = $redis->hLen(Discovery::NODE_KEY);
 
             return Json::encode([
                 'length' => $length,
@@ -76,9 +95,12 @@ class Discovery extends Tcp
                 'update_at' => time()
             ]);
         } else {
-            $list = $redis->hGetAll('node');
+            $list = $redis->hGetAll(Discovery::NODE_KEY);
+            foreach ($list as $key => $value) {
+                $list[$key] = json_decode($value, true);
+            }
             return Json::encode([
-                'node' => $list,
+                'nodes' => $list,
                 'length' => count($list),
             ]);
         }

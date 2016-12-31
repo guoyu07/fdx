@@ -9,23 +9,10 @@
 
 include __DIR__ . '/../vendor/autoload.php';
 
-use FastD\Packet\Json;
 use Fdx\Client;
 
-$client = new Client('tcp://0.0.0.0:9527', SWOOLE_SOCK_TCP);
+$client = new Client('tcp://0.0.0.0:9529');
 
-$client
-    ->connect(function ($client) {
-        $client->send(Json::encode([
-            'service' => 'demo',
-        ]));
-    })
-    ->receive(function ($client, $data) {
-        print_r(Json::decode($data));
-    })
-    ->error(function ($client) {
-        print_r($client);
-    })
-    ->close(function ($client) {})
-    ->resolve()
-;
+$response = $client->call('demo');
+
+print_r($response);

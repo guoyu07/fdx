@@ -10,6 +10,12 @@
 namespace Fdx;
 
 
+/**
+ * 追溯
+ *
+ * Class Trace
+ * @package Fdx
+ */
 class Trace
 {
 

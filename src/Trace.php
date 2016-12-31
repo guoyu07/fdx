@@ -1,7 +1,5 @@
 <?php
-
 /**
- *
  * @author    jan huang <bboyjanhuang@gmail.com>
  * @copyright 2016
  *
@@ -9,10 +7,10 @@
  * @link      http://www.fast-d.cn/
  */
 
-class Test
+namespace Fdx;
+
+
+class Trace
 {
-    public function getAge()
-    {
-        return '19';
-    }
+
 }

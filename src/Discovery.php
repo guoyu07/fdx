@@ -32,13 +32,12 @@ class Discovery extends Tcp
      * @param swoole_server_port|null $swoole
      * @return $this
      */
-    public function bootstrap(swoole_server_port $swoole = null)
+    public function bootstrap($swoole = null)
     {
         $address = 'tcp://' . $this->host . ':' . ((int)$this->port + 1);
 
         // share config
-        $server = new Discovery($address);
-        $server->configure($this->config);
+        $server = new Discovery('report', $address);
         $this->listen($server);
 
         parent::bootstrap($swoole);
@@ -104,5 +103,20 @@ class Discovery extends Tcp
                 'length' => count($list),
             ]);
         }
+    }
+
+    /**
+     * Please return swoole configuration array.
+     *
+     * @return array
+     */
+    public function configure()
+    {
+        return [
+            'redis' => [
+                'host' => '22.11.11.22',
+                'port' => 6379
+            ]
+        ];
     }
 }

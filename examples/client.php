@@ -16,3 +16,7 @@ $client = new Client('tcp://0.0.0.0:9529');
 $response = $client->call('demo');
 
 print_r($response);
+
+$trace = debug_backtrace();
+
+print_r($trace);

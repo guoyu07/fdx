@@ -66,7 +66,7 @@ class Server extends Tcp
         $servers = $this->discoveries;
         $swoole = $this->getSwoole();
         $process = new \swoole_process(function (\swoole_process $process) use ($servers, $that, $swoole) {
-            process_rename(static::SERVER_NAME . ' reporter');
+            $process->name(static::SERVER_NAME . ' reporter');
             while (true) {
                 $ip = get_local_ip();
                 foreach ($servers as $server) {
@@ -77,7 +77,7 @@ class Server extends Tcp
                                 $client->send(Json::encode([
                                     'service'   => static::SERVER_NAME,
                                     'pid'       => $swoole->master_pid,
-                                    'sock'      => $that->getSockType(),
+                                    'sock'      => $that->getServerType(),
                                     'host'      => $ip,
                                     'port'      => $that->getPort(),
                                     'stats'     => $swoole->stats(),
@@ -107,7 +107,7 @@ class Server extends Tcp
      * @param \swoole_server_port|null $swoole
      * @return $this
      */
-    public function bootstrap(\swoole_server_port $swoole = null)
+    public function bootstrap($swoole = null)
     {
         parent::bootstrap();
 
@@ -144,5 +144,15 @@ class Server extends Tcp
         $service = $this->services[$data['service']];
         $response = call_user_func_array($service, (isset($data['arguments']) && is_array($data['arguments'])) ? $data['arguments'] : []);
         return Json::encode($response);
+    }
+
+    /**
+     * Please return swoole configuration array.
+     *
+     * @return array
+     */
+    public function configure()
+    {
+
     }
 }

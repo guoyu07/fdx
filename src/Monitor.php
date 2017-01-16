@@ -11,6 +11,7 @@ namespace Fdx;
 
 
 use FastD\Http\Response;
+use FastD\Http\ServerRequest;
 use FastD\Http\SwooleServerRequest;
 use FastD\Swoole\Server\Http;
 
@@ -22,8 +23,18 @@ class Monitor extends Http
      * @param SwooleServerRequest $request
      * @return Response
      */
-    public function doRequest(SwooleServerRequest $request)
+    public function doRequest(ServerRequest $request)
     {
         // TODO: Implement doRequest() method.
+    }
+
+    /**
+     * Please return swoole configuration array.
+     *
+     * @return array
+     */
+    public function configure()
+    {
+        // TODO: Implement configure() method.
     }
 }

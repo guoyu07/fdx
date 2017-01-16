@@ -18,5 +18,7 @@ namespace Fdx;
  */
 class Trace
 {
+    protected $root;
 
+    protected $traces = [];
 }

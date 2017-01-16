@@ -11,13 +11,6 @@ use Fdx\Discovery;
 
 include __DIR__ . '/../vendor/autoload.php';
 
-$server = new Discovery('tcp://0.0.0.0:9528');
-
-$server->configure([
-    'redis' => [
-        'host' => '22.11.11.22',
-        'port' => 6379
-    ]
-]);
+$server = new Discovery('discovery', 'tcp://0.0.0.0:9528');
 
 $server->start();

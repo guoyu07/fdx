@@ -11,13 +11,17 @@ include __DIR__ . '/../vendor/autoload.php';
 
 use Fdx\Server;
 
-$server = new Server('rpc server', 'tcp://0.0.0.0:9527');
+class Server2 extends Server {
+    const SERVER_NAME =  'fds 2';
+}
+
+$server = new Server2('tcp://0.0.0.0:9533');
 $server->withDiscovery([
     'tcp://127.0.0.1:9528'
 ]);
 $server->withService('demo', function () {
     return [
-        'foo' => 'bar'
+        'foo' => 'server2'
     ];
 });
 

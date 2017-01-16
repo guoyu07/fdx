@@ -4,113 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bf362b560244dc690b6c0341866edad1",
-    "content-hash": "0f036beebdda2cadbf7e8246cd0dd436",
+    "hash": "db8d4020038b0f1053d40cccbded0ee1",
+    "content-hash": "ae8ebfbccac36f8d336f7fb0e75bf351",
     "packages": [
-        {
-            "name": "fastd/console",
-            "version": "3.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JanHuang/console.git",
-                "reference": "d67b8e95125a78c4cd3d52fad30af3a2771751e9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/console/zipball/d67b8e95125a78c4cd3d52fad30af3a2771751e9",
-                "reference": "d67b8e95125a78c4cd3d52fad30af3a2771751e9",
-                "shasum": ""
-            },
-            "require": {
-                "fastd/debug": "3.0.x-dev",
-                "php": ">=7.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastD\\Console\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "janhuang",
-                    "email": "bboyjanhuang@gmail.com"
-                }
-            ],
-            "description": "FastD console component",
-            "keywords": [
-                "FastD",
-                "console"
-            ],
-            "time": "2016-11-15 16:51:48"
-        },
-        {
-            "name": "fastd/debug",
-            "version": "3.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JanHuang/debug.git",
-                "reference": "d71b927ffb05156528d9cd26937ee33e17fea6be"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/debug/zipball/d71b927ffb05156528d9cd26937ee33e17fea6be",
-                "reference": "d71b927ffb05156528d9cd26937ee33e17fea6be",
-                "shasum": ""
-            },
-            "require": {
-                "maximebf/debugbar": "^1.12",
-                "monolog/monolog": "*",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "fastd/config": "3.0.x-dev",
-                "fastd/database": "3.0.x-dev",
-                "phpunit/phpunit": "5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastD\\Debug\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "janhuang",
-                    "email": "bboyjanhuang@gmail.com"
-                }
-            ],
-            "description": "error handle component.",
-            "keywords": [
-                "FastD",
-                "debug",
-                "exception"
-            ],
-            "time": "2016-11-14 03:11:35"
-        },
         {
             "name": "fastd/http",
             "version": "3.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/http.git",
-                "reference": "8796c8e0c56d77d3a596b7ac0292931db6c7b316"
+                "reference": "b03d2169038e04f30b8c60a642be6a495534b60c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/http/zipball/8796c8e0c56d77d3a596b7ac0292931db6c7b316",
-                "reference": "8796c8e0c56d77d3a596b7ac0292931db6c7b316",
+                "url": "https://api.github.com/repos/JanHuang/http/zipball/b03d2169038e04f30b8c60a642be6a495534b60c",
+                "reference": "b03d2169038e04f30b8c60a642be6a495534b60c",
                 "shasum": ""
             },
             "require": {
@@ -136,12 +44,12 @@
                     "email": "bboyjanhuang@gmail.com"
                 }
             ],
-            "description": "FastD Http.",
+            "description": "FastD Http",
             "keywords": [
                 "FastD",
                 "http"
             ],
-            "time": "2016-12-31 02:46:25"
+            "time": "2017-01-10 04:13:41"
         },
         {
             "name": "fastd/packet",
@@ -179,105 +87,25 @@
             "time": "2016-12-30 15:11:09"
         },
         {
-            "name": "fastd/session",
-            "version": "1.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JanHuang/session.git",
-                "reference": "9c78eb08565127d013a0a93348ca14a9d0172039"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/session/zipball/9c78eb08565127d013a0a93348ca14a9d0172039",
-                "reference": "9c78eb08565127d013a0a93348ca14a9d0172039",
-                "shasum": ""
-            },
-            "require": {
-                "fastd/storage": "3.0.x-dev",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastD\\Session\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "janhuang",
-                    "email": "bboyjanhuang@gmail.com"
-                }
-            ],
-            "time": "2016-11-14 02:52:29"
-        },
-        {
-            "name": "fastd/storage",
-            "version": "3.0.x-dev",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JanHuang/storage.git",
-                "reference": "20cf46256764c52f2b490394d10ab2fcd49377b1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/storage/zipball/20cf46256764c52f2b490394d10ab2fcd49377b1",
-                "reference": "20cf46256764c52f2b490394d10ab2fcd49377b1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastD\\Storage\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "janhuang",
-                    "email": "bboyjanhuang@gmail.com"
-                }
-            ],
-            "description": "FastD php simple framework Storage Component",
-            "keywords": [
-                "FastD",
-                "storage"
-            ],
-            "time": "2016-11-11 06:53:27"
-        },
-        {
             "name": "fastd/swoole",
             "version": "1.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JanHuang/swoole.git",
-                "reference": "6b8185475ed6bf0a7507b0878171c7e372b53f3b"
+                "reference": "adb01c4e2719393ea974f8c1fa7cf15902000ce6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/6b8185475ed6bf0a7507b0878171c7e372b53f3b",
-                "reference": "6b8185475ed6bf0a7507b0878171c7e372b53f3b",
+                "url": "https://api.github.com/repos/JanHuang/swoole/zipball/adb01c4e2719393ea974f8c1fa7cf15902000ce6",
+                "reference": "adb01c4e2719393ea974f8c1fa7cf15902000ce6",
                 "shasum": ""
             },
             "require": {
                 "ext-swoole": ">=1.8",
-                "fastd/console": "3.0.x-dev",
                 "fastd/http": "3.0.x-dev",
                 "fastd/packet": "~1.3.0",
-                "fastd/session": "1.0.x-dev",
-                "php": ">=5.6"
+                "php": ">=5.6",
+                "symfony/console": "^3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.0"
@@ -302,146 +130,7 @@
                 }
             ],
             "description": "FastD swoole.",
-            "time": "2016-12-31 02:57:27"
-        },
-        {
-            "name": "maximebf/debugbar",
-            "version": "v1.13.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/maximebf/php-debugbar.git",
-                "reference": "5f49a5ed6cfde81d31d89378806670d77462526e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/maximebf/php-debugbar/zipball/5f49a5ed6cfde81d31d89378806670d77462526e",
-                "reference": "5f49a5ed6cfde81d31d89378806670d77462526e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "^1.0",
-                "symfony/var-dumper": "^2.6|^3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.0|^5.0"
-            },
-            "suggest": {
-                "kriswallsmith/assetic": "The best way to manage assets",
-                "monolog/monolog": "Log using Monolog",
-                "predis/predis": "Redis storage"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.13-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "DebugBar\\": "src/DebugBar/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Maxime Bouroumeau-Fuseau",
-                    "email": "maxime.bouroumeau@gmail.com",
-                    "homepage": "http://maximebf.com"
-                },
-                {
-                    "name": "Barry vd. Heuvel",
-                    "email": "barryvdh@gmail.com"
-                }
-            ],
-            "description": "Debug bar in the browser for php application",
-            "homepage": "https://github.com/maximebf/php-debugbar",
-            "keywords": [
-                "debug",
-                "debugbar"
-            ],
-            "time": "2016-09-15 14:01:59"
-        },
-        {
-            "name": "monolog/monolog",
-            "version": "1.22.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bad29cb8d18ab0315e6c477751418a82c850d558",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "psr/log": "~1.0"
-            },
-            "provide": {
-                "psr/log-implementation": "1.0.0"
-            },
-            "require-dev": {
-                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
-                "doctrine/couchdb": "~1.0@dev",
-                "graylog2/gelf-php": "~1.0",
-                "jakub-onderka/php-parallel-lint": "0.9",
-                "php-amqplib/php-amqplib": "~2.4",
-                "php-console/php-console": "^3.1.3",
-                "phpunit/phpunit": "~4.5",
-                "phpunit/phpunit-mock-objects": "2.3.0",
-                "ruflin/elastica": ">=0.90 <3.0",
-                "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "~5.3"
-            },
-            "suggest": {
-                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
-                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
-                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
-                "ext-mongo": "Allow sending log messages to a MongoDB server",
-                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
-                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
-                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
-                "php-console/php-console": "Allow sending log messages to Google Chrome",
-                "rollbar/rollbar": "Allow sending log messages to Rollbar",
-                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
-                "sentry/sentry": "Allow sending log messages to a Sentry server"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Monolog\\": "src/Monolog"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
-            "homepage": "http://github.com/Seldaek/monolog",
-            "keywords": [
-                "log",
-                "logging",
-                "psr-3"
-            ],
-            "time": "2016-11-26 00:15:39"
+            "time": "2017-01-14 14:31:08"
         },
         {
             "name": "psr/http-message",
@@ -541,6 +230,126 @@
             "time": "2016-10-10 12:19:37"
         },
         {
+            "name": "symfony/console",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/console.git",
+                "reference": "4f9e449e76996adf310498a8ca955c6deebe29dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/console/zipball/4f9e449e76996adf310498a8ca955c6deebe29dd",
+                "reference": "4f9e449e76996adf310498a8ca955c6deebe29dd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/debug": "~2.8|~3.0",
+                "symfony/polyfill-mbstring": "~1.0"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.8|~3.0",
+                "symfony/filesystem": "~2.8|~3.0",
+                "symfony/process": "~2.8|~3.0"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/filesystem": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Console\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-01-08 20:47:33"
+        },
+        {
+            "name": "symfony/debug",
+            "version": "v3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "810ba5c1c5352a4ddb15d4719e8936751dff0b05"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/810ba5c1c5352a4ddb15d4719e8936751dff0b05",
+                "reference": "810ba5c1c5352a4ddb15d4719e8936751dff0b05",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "conflict": {
+                "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
+            },
+            "require-dev": {
+                "symfony/class-loader": "~2.8|~3.0",
+                "symfony/http-kernel": "~2.8|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Debug\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Debug Component",
+            "homepage": "https://symfony.com",
+            "time": "2017-01-02 20:32:22"
+        },
+        {
             "name": "symfony/polyfill-mbstring",
             "version": "v1.3.0",
             "source": {
@@ -598,69 +407,6 @@
                 "shim"
             ],
             "time": "2016-11-14 01:06:16"
-        },
-        {
-            "name": "symfony/var-dumper",
-            "version": "v3.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "f722532b0966e9b6fc631e682143c07b2cf583a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/f722532b0966e9b6fc631e682143c07b2cf583a0",
-                "reference": "f722532b0966e9b6fc631e682143c07b2cf583a0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9",
-                "symfony/polyfill-mbstring": "~1.0"
-            },
-            "require-dev": {
-                "twig/twig": "~1.20|~2.0"
-            },
-            "suggest": {
-                "ext-symfony_debug": ""
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "Resources/functions/dump.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Component\\VarDumper\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony mechanism for exploring and dumping PHP variables",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "debug",
-                "dump"
-            ],
-            "time": "2016-12-11 14:34:22"
         }
     ],
     "packages-dev": [
@@ -1869,16 +1615,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.1",
+            "version": "v3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "a7095af4b97a0955f85c8989106c249fa649011f"
+                "reference": "50eadbd7926e31842893c957eca362b21592a97d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/a7095af4b97a0955f85c8989106c249fa649011f",
-                "reference": "a7095af4b97a0955f85c8989106c249fa649011f",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/50eadbd7926e31842893c957eca362b21592a97d",
+                "reference": "50eadbd7926e31842893c957eca362b21592a97d",
                 "shasum": ""
             },
             "require": {
@@ -1920,7 +1666,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-10 10:07:06"
+            "time": "2017-01-03 13:51:32"
         },
         {
             "name": "webmozart/assert",
@@ -1977,10 +1723,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "fastd/http": 20,
-        "fastd/console": 20,
-        "fastd/debug": 20,
-        "fastd/storage": 20,
-        "fastd/session": 20,
         "fastd/swoole": 20
     },
     "prefer-stable": false,
